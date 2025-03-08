@@ -1,0 +1,35 @@
+{
+  "version": "1.7.10",
+  "homepage": "https://github.com/freeok/so-novel",
+  "description": "网络小说下载工具 | 支持多平台使用",
+  "license": {
+    "identifier": "AGPL-3.0",
+    "url": "https://github.com/freeok/so-novel/blob/main/LICENSE"
+  },
+  "url": "https://github.com/freeok/so-novel/releases/download/v1.7.10/sonovel-windows.tar.gz",
+  "hash": "a8332593b2a58d0824ece2e6ccf58bcba786add8ce44532437cf66df28c584b4",
+  "extract_dir": "SoNovel",
+  "bin": [
+    "SoNovel.exe"
+  ],
+  "persist": [
+    "config.ini"
+  ],
+  "shortcuts": [
+    [
+      "SoNovel.exe",
+      "SoNovel"
+    ]
+  ],
+  "checkver": {
+    "url": "https://api.github.com/repos/freeok/so-novel/releases",
+    "jsonpath": "$[0].assets[*].browser_download_url",
+    "regex": "/releases/download/v([\\d.]+)/(?<file>sonovel-win.*?\\.tar.gz)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/freeok/so-novel/releases/download/v$version/$matchFile"
+  },
+  "notes": [
+    "使用前请务必阅读 `readme.txt` 文件"
+  ]
+}
