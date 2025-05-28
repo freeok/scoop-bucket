@@ -1,6 +1,7 @@
 {
   "version": "1.6.5",
   "description": "Another Mihomo GUI. (building...)",
+  "homepage": "https://github.com/xishang0128/sparkle",
   "license": "GPL-3.0",
   "architecture": {
     "64bit": {
@@ -30,9 +31,6 @@
       "arm64": {
         "url": "https://github.com/xishang0128/sparkle/releases/download/v$version/sparkle-windows-$version-arm64-portable.7z"
       }
-    },
-    "hash": {
-      "url": "$url.sha256"
     }
   }
 }
