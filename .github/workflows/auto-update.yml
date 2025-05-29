@@ -8,6 +8,9 @@ on:
     # 每天 UTC 0 点执行 (北京时间 8 点)
     - cron: '0 0 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   excavate:
     name: Excavate
