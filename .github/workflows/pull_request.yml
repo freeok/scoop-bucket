@@ -1,0 +1,17 @@
+name: Pull Requests
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+    types: [ opened ]
+
+jobs:
+  pullRequestHandler:
+    name: Pull Request Validator
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Pull Request Validator
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -5,11 +5,8 @@ name: Excavator
 on:
   workflow_dispatch:
   schedule:
-    # 每天 UTC 0 点执行 (北京时间 8 点)
-    - cron: '0 0 * * *'
-
-permissions:
-  contents: write
+    # 每天 UTC 4 点执行 (中午 12 点)
+    - cron: '0 4 * * *'
 
 jobs:
   excavate:
@@ -22,4 +19,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: "1"
-          THROW_ERROR: '0'
