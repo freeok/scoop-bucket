@@ -1,28 +1,31 @@
 {
-    "version": "1.9.1",
-    "description": "跨平台网络小说下载工具",
-    "homepage": "https://github.com/freeok/so-novel",
-    "license": "AGPL-3.0",
-    "url": "https://github.com/freeok/so-novel/releases/download/v1.9.1/sonovel-windows.tar.gz",
-    "hash": "c84e102edc280686c214efa2151337d3c19b4314203498e535530ed7b858e251",
-    "extract_dir": "SoNovel",
-    "persist": "config.ini",
-    "shortcuts": [
-        [
-            "SoNovel.exe",
-            "SoNovel"
-        ]
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/freeok/so-novel/releases",
-        "jsonpath": "$[0].tag_name",
-        "regex": "v([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/freeok/so-novel/releases/download/v$version/sonovel-windows.tar.gz"
-    },
-    "notes": [
-        "使用前请务必阅读 `readme.txt`",
-        "config.ini.original 是最新的配置文件"
+  "version": "1.9.1",
+  "description": "网文下载器",
+  "homepage": "https://github.com/freeok/so-novel",
+  "license": "AGPL-3.0",
+  "url": "https://github.com/freeok/so-novel/releases/download/v1.9.1/sonovel-windows.tar.gz",
+  "hash": "c84e102edc280686c214efa2151337d3c19b4314203498e535530ed7b858e251",
+  "extract_dir": "SoNovel",
+  "persist": [
+    "config.ini",
+    "rules"
+  ],
+  "shortcuts": [
+    [
+      "SoNovel.exe",
+      "SoNovel"
     ]
+  ],
+  "checkver": {
+    "url": "https://api.github.com/repos/freeok/so-novel/releases",
+    "jsonpath": "$[0].tag_name",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/freeok/so-novel/releases/download/v$version/sonovel-windows.tar.gz"
+  },
+  "notes": [
+    "使用前请务必阅读 `readme.txt`",
+    "config.ini.original 是最新的配置文件"
+  ]
 }
