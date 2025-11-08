@@ -27,5 +27,20 @@
     "notes": [
         "使用前请务必阅读 `readme.txt`",
         "config.ini.original 是最新的配置文件"
+    ],
+    "pre_install": [
+        "$bat_content = @(",
+        "    '@echo off',",
+        "    'pushd \"%~dp0\"',",
+        "    '\"%~dp0SoNovel.exe\" %*',",
+        "    'popd'",
+        ")",
+        "Set-Content -Path \"$dir\\sonovel.bat\" -Value $bat_content -Encoding Ascii"
+    ],
+    "bin": [
+        [
+            "sonovel.bat",
+            "sonovel"
+        ]
     ]
 }
