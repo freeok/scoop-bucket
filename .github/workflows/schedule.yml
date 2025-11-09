@@ -5,8 +5,8 @@ name: Excavator
 on:
   workflow_dispatch:
   schedule:
-    # 每天 UTC 4 点执行 (中午 12 点)
-    - cron: '0 4 * * *'
+    # 每天北京时间 00:00、06:00、12:00、18:00 执行
+    - cron: '0 16,22,4,10 * * *'
 
 jobs:
   excavate:
