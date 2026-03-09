@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/freeok/so-novel/releases/download/v1.10.0/sonovel-windows.tar.gz",
-            "hash": "0dec61fad57472dcb9f140fc55051060110fe503e6b591f58eeb42743bbba534"
+            "hash": "0426B6E26AC40994888E2A54621B4D9247E9C55B592D0DF93870A76A28810D55"
         }
     },
     "extract_dir": "SoNovel",
